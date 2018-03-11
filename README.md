@@ -28,6 +28,14 @@ On-premise vs. SaaS
 * do you "only" build stuff, or also deploy stuff
 
 
+OSS vs. Commercial products
+---------------------------
+
+* how big is the community around the tool
+* popularity of tool (last commits, stars on Github, issues opened vs. closed...)
+* do you need (commercial) support
+
+
 Configuration
 -------------
 
@@ -62,6 +70,7 @@ Job Runners
 * do runners cover all OSes that you need (i.e. Windows, Mac)
 * can runners easily be set up (with your build tools)
 * are environments separated (each tech stack has its own runner)
+* do jobs survive a restart of the master
 
 
 Pipelines
@@ -134,3 +143,4 @@ Rerferences
 
 * http://dannyvarner.com/2017/08/11/how-to-choose-a-continuous-integration-tool.html
 * https://stackify.com/top-continuous-integration-tools/
+* https://blog.sqreen.io/how-to-choose-your-ci-tool/
