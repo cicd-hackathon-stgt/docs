@@ -3,21 +3,6 @@ Criteria for selecting CI/CD tools
 
 Here's a collection of thoughts regarding how to chose a CI/CD tool that fits your needs.
 
-
-Supported Concepts
-------------------
-
-* pipline per commit
-* Stages
-* Jobs
-* Artifact storage and retrival for a job (S3, on CICD Server, on artifact server ...), support for artifact lifecycle
-* Caching concept
-* Support for deployments (redeployment of older commits x stage)
-* Quality of statemachine concepts
-* Respect order of commits & serialization points in pipelines (ensure just one concurrent deployment of a single stage x service)
-* pipeline of pipelines (cool concept found in GoCD :)
-
-
 Documentation
 -------------
 
@@ -86,18 +71,23 @@ Job Runners
 * can runners easily be set up (with your build tools)
 * are environments separated (each tech stack has its own runner)
 * do jobs survive a restart of the master
+* Caching concept - many build jobs need massive ammount of dependencies. Not downloading these dependencies every time is relevant for build-steps speed up.
 
 
 Pipelines
 ---------
 
 * Support of Pipelines
+* Pipline per commit
 * Pipelines as code
 * DSL (Groovy...) or YAML
 * fan-in / fan-out
 * can tasks be shared in libraries
 * can pipelines be generated via CLI tool / automated
 * are manual approval / input steps provided
+* pipeline of pipelines (cool concept found in GoCD :)
+* Quality of statemachine concepts - found some suprising situations where jobs was not expected to be executed.
+* Respect order of commits & serialization points in pipelines (ensure just one concurrent deployment of a single stage x service)
 
 
 Job Configuration
@@ -105,6 +95,12 @@ Job Configuration
 
 * grouping jobs in folders / groups
 * templates for job configuration re-use
+* Artifact storage and retrival for a job (S3, on CICD Server, on artifact server ...), support for artifact lifecycle
+
+
+Environments
+------------
+* Deployment overview per environment: If some of your jobs do a deployment, you may want to be able to redo the deployment. A overview of available and current deployments per environment is very useful.
 
 
 API / CLI tools
