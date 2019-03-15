@@ -10,8 +10,8 @@ Documentation
 * does usage of tool provide enough blog posts / SO posts / tutorials / videos
 
 
-Setup & Maintenance
--------------------
+Setup & Maintenance (Day 1 and Day 2 operations)
+------------------------------------------------
 
 * Packages (`.rpm`, `.deb`...) available (and maintained)
 * Docker images available (and maintained)
@@ -19,6 +19,7 @@ Setup & Maintenance
 * Installer for (public) cloud environments (BOSH manifest, Terrarform, Ansible, Chef, ...)
 * Can setup and configuration be fully automated (e.g. Concourse via BOSH)
 * Regarding configuration: GUI-only config or files (that can be put in version control...)
+* HA setup, zero downtime
 
 
 On-premise vs. SaaS
